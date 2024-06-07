@@ -67,3 +67,5 @@ def alumnos_del(request, pk):
      alumnos=Alumno.objects.all()
      context={"alumnos":alumnos, "mensaje": mensaje}
      return render(request, 'alumnos/alumnos_list.html', context)
+    
+    a
