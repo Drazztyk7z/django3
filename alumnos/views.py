@@ -67,7 +67,7 @@ def alumnos_del(request, pk):
      alumnos=Alumno.objects.all()
      context={"alumnos":alumnos, "mensaje": mensaje}
      return render(request, 'alumnos/alumnos_list.html', context)
-<<<<<<< HEAD
+
  
 def alumnos_findEdit(request, pk):
     
@@ -86,7 +86,7 @@ def alumnos_findEdit(request, pk):
 def alumnoUpdate(request):
     if request.method=="POST":
         
-=======
+
     
 def alumnos_findEdit (request, pk):
    if pk!="":
@@ -103,7 +103,7 @@ def alumnos_findEdit (request, pk):
 
 def alumnosUpdate(request):
     if request.method == "POST":
->>>>>>> fb9c2183b61437ec9542bed79101a3189b457394
+
         rut = request.POST["rut"]
         nombre = request.POST["nombre"]
         apaterno = request.POST["apaterno"]
@@ -117,7 +117,7 @@ def alumnosUpdate(request):
 
         objGenero = Genero.objects.get(id_genero=genero)
         alumno = Alumno()
-<<<<<<< HEAD
+
         alumno.rut=rut,
         alumno.nombre=nombre,
         alumno.apellido_paterno=apaterno,
@@ -137,7 +137,7 @@ def alumnosUpdate(request):
         alumnos=Alumno.objects.all()
         context={"alumnos":alumnos}
         return render(request, 'alumnos/alumnos_list.html', context)
-=======
+
         alumno.rut = rut
         alumno.nombre = nombre
         alumno.apellido_paterno = apaterno
@@ -161,4 +161,4 @@ def alumnosUpdate(request):
         alumnos = Alumno.objects.all()
         context = {'alumnos': alumnos}
         return render(request, 'alumnos/alumnos_list.html', context)
->>>>>>> fb9c2183b61437ec9542bed79101a3189b457394
+
